@@ -9,9 +9,15 @@ class ApplicationController < ActionController::Base
   # Scrub sensitive parameters from your log
   filter_parameter_logging :password
 
+  private
   def login_user
     return if %w(sessions passwords registrations).include?(params[:controller])
+    return unless secure?
     return if user_signed_in?
-    redirect_to new_user_registration_path
+    redirect_to '/'
+  end
+
+  def secure?
+    true
   end
 end

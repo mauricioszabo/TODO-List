@@ -1,7 +1,9 @@
 ActionController::Routing::Routes.draw do |map|
-  map.devise_for :users
+  map.devise_for :users do |u|
+    u.resources :lists
+  end
 
-  map.root :controller=>"sessions", :action=>"new"
+  map.root :controller => "home"
   # The priority is based upon order of creation: first created -> highest priority.
 
   # Sample of regular route:

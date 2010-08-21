@@ -1,0 +1,34 @@
+<mockup version="1.0" skin="sketch" measuredW="520" measuredH="430" mockupW="450" mockupH="400">
+  <controls>
+    <control controlID="25" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="60" y="20" w="-1" h="-1" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>A%20Web%20Page%0Ahttp%3A//localhost%3A3000</text>
+      </controlProperties>
+    </control>
+    <control controlID="34" controlTypeID="com.balsamiq.mockups::Title" x="94" y="109" w="-1" h="-1" measuredW="209" measuredH="62" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Dashboard</text>
+      </controlProperties>
+    </control>
+    <control controlID="35" controlTypeID="com.balsamiq.mockups::Label" x="79" y="278" w="-1" h="-1" measuredW="156" measuredH="25" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>You%20are%20watching%203%20lists</text>
+      </controlProperties>
+    </control>
+    <control controlID="37" controlTypeID="com.balsamiq.mockups::Label" x="75" y="172" w="211" h="18" measuredW="137" measuredH="25" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>You%20have%203%20task%20lists</text>
+      </controlProperties>
+    </control>
+    <control controlID="39" controlTypeID="com.balsamiq.mockups::Paragraph" x="94" y="205" w="200" h="73" measuredW="200" measuredH="140" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>*%20A%20new%20list%0A*%20Another%20list%0A*%20And%203%20more%20%28%5Bshow%20all%20lists%5D%29</text>
+      </controlProperties>
+    </control>
+    <control controlID="41" controlTypeID="com.balsamiq.mockups::Paragraph" x="94" y="303" w="251" h="50" measuredW="200" measuredH="140" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>*%20%5BFoo%27s%20%22Birthday%20party%22%20list%5D%0A*%20%5BBar%27s%20%22Work%22%20list%5D</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>
