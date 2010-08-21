@@ -1,0 +1,13 @@
+<h1><%=h @user.name %>'s lists</h1>
+
+<ul>
+  <% @lists.each do |list| %>
+    <li>
+      <b><%= link_to h(list.name), [@user, list] %></b>
+      (Tasks:
+      <%= list.tasks.collect(&:name).join(", ") %>)
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to 'Back to Dashboard', dashboard_path %>

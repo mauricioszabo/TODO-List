@@ -1,0 +1,21 @@
+<h1><%=h @list.user.name %>'s "<%=h @list.name %>"</h1>
+
+<p>
+  <b>Name:</b>
+  <%=h @list.name %>
+</p>
+
+<p>
+  <b>Visibility:</b>
+  <%=h @list.visibility %>
+</p>
+
+<h2>Tasks</h2>
+<ul id="tasks">
+  <% @list.tasks.each do |task| %>
+  <li><%=h task.name %></li>
+  <% end %>
+</ul>
+
+<%= link_to 'All lists of this user', user_lists_path(@list.user_id) %> |
+<%= link_to 'Dashboard', dashboard_path %>

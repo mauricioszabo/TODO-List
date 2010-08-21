@@ -1,0 +1,25 @@
+<%= f.error_messages %>
+
+<p>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+</p>
+
+<p>
+  <%= f.label :public, "Public list" %>
+  <%= f.check_box :public %>
+</p>
+
+<div id="tasks">
+  <h2>Tasks</h2>
+  <% f.fields_for :tasks, :name => 'algo' do |task_form| %>
+    <%= render :partial => 'task', :locals => { :f => task_form } %>
+  <% end -%>
+</div>
+<p>
+  <%= add_task_link(f) %>
+</p>
+
+<p>
+  <%= f.submit "Save" %>
+</p>

@@ -3,3 +3,14 @@ Factory.define :user do |f|
   f.email 'test@user.com'
   f.password 'test_test'
 end
+
+Factory.define :list do |f|
+  f.sequence(:name) { |i| "List #{i}" }
+  f.public true
+  f.association :user
+end
+
+Factory.define :task do |f|
+  f.sequence(:name) { |i| "Task #{i}" }
+  f.association :list
+end

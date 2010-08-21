@@ -7,6 +7,6 @@ class User < ActiveRecord::Base
   # Setup accessible (or protected) attributes for your model
   attr_accessible :name, :email, :password, :password_confirmation
   validates_presence_of :name
-  has_many :lists
-  has_many :watches
+  has_many :lists, :dependent => :destroy
+  has_many :watches, :dependent => :destroy
 end

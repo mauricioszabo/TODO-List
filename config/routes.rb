@@ -1,7 +1,9 @@
 ActionController::Routing::Routes.draw do |map|
-  map.devise_for :users do |u|
-    u.resources :lists
-  end
+  map.devise_for :users
+
+  map.resources :lists, :path_prefix => 'users/:user_id', :name_prefix => 'user_'
+
+  map.dashboard '/', :controller => 'home'
 
   map.root :controller => "home"
   # The priority is based upon order of creation: first created -> highest priority.

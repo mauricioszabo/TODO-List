@@ -1,15 +1,21 @@
 <h1>Dashboard</h1>
 
-<p>You have <%= pluralize(@list_count, "task list") %></p>
+<p>
+</p>
+
+<p><b>You have <%= pluralize(@list_count, "task list") %></b></p>
 <ul>
   <% @lists.each do |list| %>
     <li><%= list.name %></li>
   <% end %>
-  <li>And <%= remaining_lists %> more (show all lists)</li>
+  <li>
+    And <%= remaining_lists %> more 
+    (<%= link_to 'show all lists', user_lists_path(current_user) %>)
+  </li>
   <li><%= link_to "New list", new_user_list_path(current_user) %></li>
 </ul>
 
-<p>You are watching <%= pluralize(@watches.count, "list") %></p>
+<p><b>You are watching <%= pluralize(@watches.count, "list") %></b></p>
 <ul>
 </ul>
 
