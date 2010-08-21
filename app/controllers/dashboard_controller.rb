@@ -1,4 +1,4 @@
-class HomeController < ApplicationController
+class DashboardController < ApplicationController
   MAX_LISTS = 2
 
   def index

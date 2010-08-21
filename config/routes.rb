@@ -3,9 +3,9 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :lists, :path_prefix => 'users/:user_id', :name_prefix => 'user_'
 
-  map.dashboard '/', :controller => 'home'
+  map.dashboard '/', :controller => 'dashboard'
 
-  map.root :controller => "home"
+  map.root :controller => "dashboard"
   # The priority is based upon order of creation: first created -> highest priority.
 
   # Sample of regular route:

@@ -1,7 +1,7 @@
 require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
 
-describe HomeHelper do
-  include HomeHelper
+describe DashboardHelper do
+  include DashboardHelper
 
   it "should return the remaining lists or zero if it's below zero" do
     @list_count = 0

@@ -1,6 +1,6 @@
 require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
 
-describe HomeController do
+describe DashboardController do
   integrate_views
 
   it 'should redirect to a login screen, if the user is not logged' do
