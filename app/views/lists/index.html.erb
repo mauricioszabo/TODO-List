@@ -1,3 +1,7 @@
+<div id="avatar">
+  <%= image_tag(@user.avatar_url, :width => 100) if @user.avatar? %>
+</div>
+
 <h1><%=h @user.name %>'s lists</h1>
 
 <ul>
