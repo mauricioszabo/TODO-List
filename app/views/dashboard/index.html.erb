@@ -1,21 +1,35 @@
 <h1>Dashboard</h1>
 
 <p>
+  <% form_remote_tag :url => search_lists_path, :update => 'search_result' do %>
+    <%= text_field_tag :search %>
+    <%= submit_tag 'Search' %>
+  <% end %>
 </p>
+
+<div id='search_result'>
+</div>
 
 <p><b>You have <%= pluralize(@list_count, "task list") %></b></p>
 <ul>
   <% @lists.each do |list| %>
-    <li><%= list.name %></li>
+    <li>
+      <b><%= link_to h(list.name), [current_user, list] %></b>
+    </li>
   <% end %>
+
   <li>
     And <%= remaining_lists %> more 
     (<%= link_to 'show all lists', user_lists_path(current_user) %>)
   </li>
+
   <li><%= link_to "New list", new_user_list_path(current_user) %></li>
 </ul>
 
 <p><b>You are watching <%= pluralize(@watches.count, "list") %></b></p>
 <ul>
+  <% @watches.each do |watch| %>
+    <li><%= link_to h(watch.list.caption), [watch.list.user, watch.list] %></li>
+  <% end %>
 </ul>
 

@@ -1,0 +1,5 @@
+<ul>
+<% @lists.each do |list| %>
+  <li><%= link_to h(list.caption), [list.user, list] %></li>
+<% end %>
+</ul>

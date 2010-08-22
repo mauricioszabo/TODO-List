@@ -15,4 +15,14 @@ module ListsHelper
     # If the task is a new record, we can just remove the div from the dom
     link_to_function("remove", "$(this).up('.task').remove();");
   end
+
+  def watch_link
+    return if @list.user == current_user
+    link_params = { :url => watch_list_path(@list), :update => 'watch' }
+    if current_user.watches.collect(&:list_id).include?(@list.id)
+      "<div id='watch'>You're watching this list #{link_to_remote('Unwatch', link_params)}</div>"
+    else
+      "<div id='watch'>#{link_to_remote('Watch', link_params)}</div>"
+    end
+  end
 end

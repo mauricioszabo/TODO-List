@@ -1,8 +1,12 @@
 ActionController::Routing::Routes.draw do |map|
   map.devise_for :users
 
+  map.watch_list 'watch/:id', :controller => 'lists', :action => 'watch'
   map.resources :lists, :path_prefix => 'users/:user_id', :name_prefix => 'user_'
 
+  map.search_lists '/search', :controller => 'dashboard', :action => 'search', :conditions => {
+    :method => :post 
+  }
   map.dashboard '/', :controller => 'dashboard'
 
   map.root :controller => "dashboard"

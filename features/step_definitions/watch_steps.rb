@@ -13,6 +13,8 @@ Given /^another person has created (\d+) private lists$/ do |private_lists|
 end
 
 When /^I search for "([^"]*)"$/ do |search_string|
-  pending # express the regexp above with the code you wish you had
+  visit path_to('dashboard')
+  fill_in "search", :with => "List 1"
+  click "Search"
 end
 

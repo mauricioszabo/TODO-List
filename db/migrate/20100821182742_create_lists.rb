@@ -7,6 +7,8 @@ class CreateLists < ActiveRecord::Migration
 
       t.timestamps
     end
+    add_index :lists, :name
+    add_index :lists, :public
   end
 
   def self.down
