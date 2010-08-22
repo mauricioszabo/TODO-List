@@ -15,7 +15,7 @@ Scenario: Create a new list
   And should see "Foo Bar Baz"
 
 Scenario: Sign in
-  Given that I'm already an user
+  Given that I'm already an user with email "test@user.com"
   And that I am on the home page
   And fill in "Email" with "test@user.com"
   And fill in "Password" with "test_test"

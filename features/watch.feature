@@ -11,15 +11,15 @@ Scenario: Find public lists to watch
   And another person has created 2 private lists
   When I fill in "search" with "List 1"
   And click on "Search"
-  Then I should see "List 1"
+  Then I should see "Public List 1"
 
-@wip
+@selenium
 Scenario: Watch a list
   Given that I'm already an user
   And I'm already logged
   And another person has created 4 public lists
-  When I search for "List 1"
-  And click on "List 1"
+  When I search for "Public List 1"
+  And click on "Public List 1"
   And click on "Watch"
   And go to dashboard
-  Then I should see "List 1"
+  Then I should see "Public List 1"

@@ -3,7 +3,7 @@ Feature: Manage lists and tasks
   As an authenticated user
   I want to create lists and tasks
 
-@culerity
+@selenium
 Scenario: Create a new list
   Given that I'm already an user
   And I'm already logged
