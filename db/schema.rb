@@ -19,6 +19,9 @@ ActiveRecord::Schema.define(:version => 20100822164628) do
     t.datetime "updated_at"
   end
 
+  add_index "lists", ["name"], :name => "index_lists_on_name"
+  add_index "lists", ["public"], :name => "index_lists_on_public"
+
   create_table "tasks", :force => true do |t|
     t.string   "name"
     t.integer  "list_id"

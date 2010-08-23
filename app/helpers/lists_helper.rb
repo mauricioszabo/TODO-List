@@ -11,9 +11,9 @@ module ListsHelper
     end
   end
 
-  def remove_task_link(form_builder)
+  def remove_task_link
     # If the task is a new record, we can just remove the div from the dom
-    link_to_function("remove", "$(this).up('.task').remove();");
+    link_to_function("Remove task", "$(this).up('.task').remove();");
   end
 
   def watch_link
